@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo{
+    grid-area: logo;
+    background-color: #725004;
+}
+.header{
+    grid-area: header;
+    background-color: #d30505;
+}
+.left{
+    grid-area: left;
+    background-color: #03039f;
+}
+.main{
+    grid-area: main;
+    background-color: #335b33;
+}
+.right{
+    grid-area: right;
+    background-color: #ef8653;
+}
+.meet{
+    grid-area: meet;
+    background-color: #88baea;
+}
+.chat{
+    grid-area: chat;
+    background-color: #003118;
+}
+.icon{
+    grid-area: icon;
+    background-color: #f606f6;
+}
+ul.inbox{
+    list-style: none;
+    color: #f8f7f7;
+}
+
+.inbox li{
+    margin: 15px;
+}
+.left, .main, .right{
+    overflow-y: scroll;
+}
+.user{
+    grid-area: user-info;
+    background-color: #02026c;
+}
+.right2{
+    grid-area: right2;
+    background-color: #e7a753;
+}
+.container{
+    display: grid;
+    grid-template:
+    'logo header user-info user-info' 65px
+    'left main right right2' 230px
+    'chat main right right2' 1fr
+    'meet main right right2' 1fr
+    'icon main right right2' 1fr/
+    230px    2fr   0.5fr 0.1fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media screen and (max-width: 800px){
+    .container{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    .container{
+        display: grid;
+        grid-template:
+        'logo header user-info' 65px
+        'left main right2' 230px
+        'chat main right2' 1fr
+        'meet main right2' 1fr
+        'icon main right2' 1fr/
+        250px    2fr   50px ;
+        width: 100vw;
+        height: 100vh;
+    }
+    .right{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 550px){
+    .container{
+        display: grid;
+        grid-template:
+        'logo header user-info' 65px
+        'left-menu main right2' 230px
+        'chat main right2' 1fr
+        'meet main right2' 1fr
+        'icon main right2' 1fr/
+        50px    2fr   50px ;
+        width: 100vw;
+        height: 100vh;
+    }
+}
